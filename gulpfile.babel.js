@@ -23,6 +23,20 @@ gulp.task('es6', () => {
     .pipe(maps.write('.'))
     .pipe(gulp.dest('.'))
 })
+
+gulp.task('ngTips', () => {
+    return browserify({
+        entries: ['./src/js/ngTips.js'],
+        debug: true
+    })
+        .transform("babelify", {presets: ['es2015', 'stage-2']})
+        .bundle()
+        .pipe(source('./dist/js/ngTips.js'))
+        .pipe(buffer())
+        .pipe(maps.init({loadMaps: true}))
+        .pipe(maps.write('.'))
+        .pipe(gulp.dest('.'))
+})
 gulp.task('sass', () => {
     return rubySass('./src/sass/scss/*.scss',{sourcemap: true})
         .on('error', rubySass.logError)
