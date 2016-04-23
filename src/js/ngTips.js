@@ -29,7 +29,6 @@ const tipsDirective = ($http, $templateCache, $compile, ngTips) => {
             const showBox = (name, status = true) => scope[name + 'BoxActive'] = status
 
             scope.$on('alert', (event, ...content) => {
-                console.log(1323);
                 scope.ngTipsOnlyTitle = !content[1]
                 scope.ngTipsTitle = content[0]
                 scope.ngTipsContent = content[1]

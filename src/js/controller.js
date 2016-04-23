@@ -9,6 +9,18 @@ export default class self {
 	demoAlert (t, c){
 		this._ngTips.alert(t, c)
 	}
+	demoConfirm (t){
+		this._ngTips.confirm(t, () =>{
+			console.log('您按下了确认');
+		}, () =>{
+			console.log('您按下了取消');
+		})
+	}
+	demoPrompt (t){
+		this._ngTips.prompt(t, text =>{
+			console.log('您输入了' + text);
+		})
+	}
 
 
 }
