@@ -1,8 +1,8 @@
 {
   "name": "angular-mobile-tips",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个基于angular1.x的移动端弹窗插件",
-  "main": "index.js",
+  "main": "dist/js/ngTips.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
